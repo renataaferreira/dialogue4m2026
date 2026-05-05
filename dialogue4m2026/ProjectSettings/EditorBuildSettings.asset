@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Splash.unity
     guid: b97bd33efceb97a4a9b96b8bb66567d8
   - enabled: 1
-    path: Assets/Scenes/MenuPrincipal.unity
+    path: Assets/Scenes/Menu.unity
     guid: ee420057bacf394498302292f18a7bb4
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity

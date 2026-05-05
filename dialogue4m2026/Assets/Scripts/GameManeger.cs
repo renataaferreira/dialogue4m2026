@@ -6,9 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    // =========================
-    // ENUM DE ESTADOS
-    // =========================
     public enum GameState
     {
         Iniciando,
@@ -18,15 +15,14 @@ public class GameManager : MonoBehaviour
 
     public GameState currentState;
 
-    // =========================
-    // SINGLETON
-    // =========================
+    private PlayerInput playerInput;
+
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // não destruir entre cenas
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -36,52 +32,54 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        SetState(GameState.Iniciando);
-        LoadScene("Splash");
+        ChangeState(GameState.Iniciando);
+        LoadSplash();
     }
-
-    // =========================
-    // CONTROLE DE ESTADO
-    // =========================
-    public void SetState(GameState newState)
+    
+    void ChangeState(GameState newState)
     {
         currentState = newState;
         Debug.Log("Estado atual: " + currentState);
     }
+    
 
-    // =========================
-    // CONTROLE DE CENAS
-    // =========================
-    public void LoadScene(string sceneName)
+    void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
 
-    // =========================
-    // BOTÃO JOGAR
-    // =========================
+    void LoadSplash()
+    {
+        LoadScene("Splash");
+    }
+
+    public void GoToMenu()
+    {
+        if (currentState == GameState.Iniciando)
+        {
+            ChangeState(GameState.MenuPrincipal);
+            LoadScene("MenuPrincipal");
+        }
+    }
+
     public void StartGame()
     {
         if (currentState == GameState.MenuPrincipal)
         {
-            SetState(GameState.Gameplay);
+            ChangeState(GameState.Gameplay);
             LoadScene("SampleScene");
         }
     }
 
-    // =========================
-    // BOTÃO SAIR
-    // =========================
     public void QuitGame()
     {
+        Debug.Log("Saiu do jogo");
         Application.Quit();
     }
-
-    // =========================
-    // INPUT (SIMPLES)
-    // =========================
-    public void SetupPlayerInput(PlayerInput playerInput)
+    
+    public void AssignPlayerInput(PlayerInput input)
     {
-        playerInput.ActivateInput();
+        playerInput = input;
+        Debug.Log("Input atribuído ao jogador!");
     }
 }

@@ -2,12 +2,6 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    void Start()
-    {
-        // Define o estado como MenuPrincipal ao entrar na cena
-        GameManager.Instance.SetState(GameManager.GameState.MenuPrincipal);
-    }
-
     // BOTÃO JOGAR
     public void Jogar()
     {

@@ -4,12 +4,11 @@ public class SplashController : MonoBehaviour
 {
     void Start()
     {
-        Invoke("IrParaMenu", 2f); // espera 2 segundos
+        Invoke(nameof(IrParaMenu), 2f);
     }
 
     void IrParaMenu()
     {
-        GameManager.Instance.SetState(GameManager.GameState.MenuPrincipal);
-        GameManager.Instance.LoadScene("MenuPrincipal");
+        GameManager.Instance.ChangeState(GameManager.GameState.MenuPrincipal);
     }
 }
