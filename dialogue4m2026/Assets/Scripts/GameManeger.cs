@@ -15,10 +15,9 @@ public class GameManager : MonoBehaviour
 
     public GameState currentState;
 
-    private PlayerInput playerInput;
-
-    void Awake()
+    private void Awake()
     {
+// Singleton
         if (Instance == null)
         {
             Instance = this;
@@ -30,56 +29,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         ChangeState(GameState.Iniciando);
         LoadSplash();
     }
-    
-    void ChangeState(GameState newState)
+
+    public void ChangeState(GameState newState)
     {
         currentState = newState;
         Debug.Log("Estado atual: " + currentState);
     }
-    
 
-    void LoadScene(string sceneName)
+// =========================
+// CONTROLE DE CENAS
+// =========================
+
+    public void LoadSplash()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("Splash");
     }
 
-    void LoadSplash()
+    public void LoadMenu()
     {
-        LoadScene("Splash");
+        SceneManager.LoadScene("MenuPrincipal");
+        ChangeState(GameState.MenuPrincipal);
     }
 
-    public void GoToMenu()
+    public void LoadGameplay()
     {
-        if (currentState == GameState.Iniciando)
-        {
-            ChangeState(GameState.MenuPrincipal);
-            LoadScene("MenuPrincipal");
-        }
-    }
-
-    public void StartGame()
-    {
-        if (currentState == GameState.MenuPrincipal)
-        {
-            ChangeState(GameState.Gameplay);
-            LoadScene("SampleScene");
-        }
-    }
-
-    public void QuitGame()
-    {
-        Debug.Log("Saiu do jogo");
-        Application.Quit();
-    }
-    
-    public void AssignPlayerInput(PlayerInput input)
-    {
-        playerInput = input;
-        Debug.Log("Input atribuído ao jogador!");
+        SceneManager.LoadScene("SampleScene");
+        ChangeState(GameState.Gameplay);
     }
 }

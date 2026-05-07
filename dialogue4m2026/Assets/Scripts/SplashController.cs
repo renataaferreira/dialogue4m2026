@@ -1,14 +1,11 @@
 using UnityEngine;
+using System.Collections;
 
-public class SplashController : MonoBehaviour
+public class SplashScreen : MonoBehaviour
 {
-    void Start()
+    IEnumerator Start()
     {
-        Invoke(nameof(IrParaMenu), 2f);
-    }
-
-    void IrParaMenu()
-    {
-        GameManager.Instance.ChangeState(GameManager.GameState.MenuPrincipal);
+        yield return new WaitForSeconds(2f);
+        GameManager.Instance.LoadMenu();
     }
 }

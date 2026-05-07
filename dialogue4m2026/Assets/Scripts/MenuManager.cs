@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class MenuManager : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-    // BOTÃO JOGAR
-    public void Jogar()
+    public void StartGame()
     {
-        GameManager.Instance.StartGame();
+        GameManager.Instance.LoadGameplay();
     }
 
-    // BOTÃO SAIR
-    public void Sair()
+    public void QuitGame()
     {
-        GameManager.Instance.QuitGame();
+        Application.Quit();
     }
 }
