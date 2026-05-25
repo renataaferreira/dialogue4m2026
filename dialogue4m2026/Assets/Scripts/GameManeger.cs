@@ -15,9 +15,14 @@ public class GameManager : MonoBehaviour
 
     public GameState currentState;
 
+    // =========================
+    // SISTEMA DE MOEDAS
+    // =========================
+    public int coins = 0;
+
     private void Awake()
     {
-// Singleton
+        // Singleton
         if (Instance == null)
         {
             Instance = this;
@@ -27,6 +32,28 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    // =========================
+    // OBSERVER DAS MOEDAS
+    // =========================
+    private void OnEnable()
+    {
+        PlayerObserverManager.OnCoinCollected += AddCoin;
+    }
+
+    private void OnDisable()
+    {
+        PlayerObserverManager.OnCoinCollected -= AddCoin;
+    }
+
+    void AddCoin()
+    {
+        coins++;
+
+        Debug.Log("Moedas: " + coins);
+
+        PlayerObserverManagerUI.UpdateCoins(coins);
     }
 
     private void Start()
@@ -41,9 +68,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Estado atual: " + currentState);
     }
 
-// =========================
-// CONTROLE DE CENAS
-// =========================
+    // =========================
+    // CONTROLE DE CENAS
+    // =========================
 
     public void LoadSplash()
     {
@@ -59,6 +86,10 @@ public class GameManager : MonoBehaviour
     public void LoadGameplay()
     {
         SceneManager.LoadScene("SampleScene");
+
+        // Carrega GUI junto
+        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+
         ChangeState(GameState.Gameplay);
     }
 }
