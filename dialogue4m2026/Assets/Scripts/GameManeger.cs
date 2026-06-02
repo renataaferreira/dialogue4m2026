@@ -34,28 +34,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // =========================
-    // OBSERVER DAS MOEDAS
-    // =========================
-    private void OnEnable()
-    {
-        PlayerObserverManager.OnCoinCollected += AddCoin;
-    }
-
-    private void OnDisable()
-    {
-        PlayerObserverManager.OnCoinCollected -= AddCoin;
-    }
-
-    void AddCoin()
-    {
-        coins++;
-
-        Debug.Log("Moedas: " + coins);
-
-        PlayerObserverManagerUI.UpdateCoins(coins);
-    }
-
     private void Start()
     {
         ChangeState(GameState.Iniciando);

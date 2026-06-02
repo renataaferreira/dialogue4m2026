@@ -6,7 +6,7 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerObserverManager.CollectCoin();
+            PlayerObserverManager.AddCoin();
 
             Destroy(gameObject);
         }

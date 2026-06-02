@@ -1,11 +1,18 @@
 using System;
+using UnityEngine;
 
 public static class PlayerObserverManager
 {
-    public static Action OnCoinCollected;
+    public static int coins = 0;
 
-    public static void CollectCoin()
+    public static Action<int> OnCoinCollected;
+
+    public static void AddCoin()
     {
-        OnCoinCollected?.Invoke();
+        coins++;
+
+        Debug.Log("Moedas: " + coins);
+
+        OnCoinCollected?.Invoke(coins);
     }
 }

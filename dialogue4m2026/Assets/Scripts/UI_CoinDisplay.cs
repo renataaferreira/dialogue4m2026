@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class UI_CoinDisplay : MonoBehaviour
 {
@@ -7,16 +7,16 @@ public class UI_CoinDisplay : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerObserverManagerUI.OnCoinsUpdated += UpdateUI;
+        PlayerObserverManager.OnCoinCollected += UpdateUI;
     }
 
     private void OnDisable()
     {
-        PlayerObserverManagerUI.OnCoinsUpdated -= UpdateUI;
+        PlayerObserverManager.OnCoinCollected -= UpdateUI;
     }
 
-    void UpdateUI(int total)
+    void UpdateUI(int totalCoins)
     {
-        coinText.text = "Moedas: " + total;
+        coinText.text = "Moedas: " + totalCoins;
     }
 }
