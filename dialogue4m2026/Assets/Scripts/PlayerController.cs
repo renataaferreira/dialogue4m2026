@@ -18,6 +18,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput = Vector2.zero;
     private Rigidbody rb;
 
+    // =========================
+    // SISTEMA DE MOEDAS
+    // =========================
+    private int coins = 0;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -91,5 +96,16 @@ public class PlayerController : MonoBehaviour
     public void SetMaxSpeed(float max) => maxSpeed = max;
     public void SetCameraRelative(bool enabled) => cameraRelativeMovement = enabled;
     public void SetCameraTransform(Transform t) => cameraTransform = t;
-}
 
+    // =========================
+    // MOEDAS
+    // =========================
+    public void AddCoin()
+    {
+        coins++;
+
+        Debug.Log("Moedas: " + coins);
+
+        PlayerObserverManager.NotifyCoinCollected(coins);
+    }
+}
