@@ -6,13 +6,7 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController player = other.GetComponent<PlayerController>();
-
-            if (player != null)
-            {
-                player.AddCoin();
-            }
-
+            PlayerObserverManager.NotifyCoinCollected();
             Destroy(gameObject);
         }
     }
