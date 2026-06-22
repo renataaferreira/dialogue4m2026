@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour
     {
         Iniciando,
         MenuPrincipal,
-        Gameplay
+        Selecao,
+        Gameplay,
+        Vitoria
     }
 
     public GameState currentState;
@@ -47,8 +49,8 @@ public class GameManager : MonoBehaviour
     }
 
     // =========================
-    // CONTROLE DE CENAS
-    // =========================
+// CONTROLE DE CENAS
+// =========================
 
     public void LoadSplash()
     {
@@ -61,6 +63,12 @@ public class GameManager : MonoBehaviour
         ChangeState(GameState.MenuPrincipal);
     }
 
+    public void LoadSelection()
+    {
+        SceneManager.LoadScene("Selecao");
+        ChangeState(GameState.Selecao);
+    }
+
     public void LoadGameplay()
     {
         SceneManager.LoadScene("SampleScene");
@@ -69,5 +77,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
 
         ChangeState(GameState.Gameplay);
+    }
+
+    public void LoadVictory()
+    {
+        SceneManager.LoadScene("Vitoria");
+        ChangeState(GameState.Vitoria);
     }
 }
