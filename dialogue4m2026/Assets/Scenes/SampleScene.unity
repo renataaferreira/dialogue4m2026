@@ -780,7 +780,7 @@ MonoBehaviour:
   ShowDebugText: 0
   ShowCameraFrustum: 1
   IgnoreTimeScale: 0
-  WorldUpOverride: {fileID: 0}
+  WorldUpOverride: {fileID: 1847052701}
   ChannelMask: -1
   UpdateMethod: 2
   BlendUpdateMethod: 1
@@ -971,9 +971,9 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 330585545}
 --- !u!114 &359930456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,7 +1343,7 @@ Transform:
   m_GameObject: {fileID: 545905311}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00740959, y: -0.68889004, z: -0.000655845, w: 0.7248277}
-  m_LocalPosition: {x: 0.56, y: 1.68, z: -5.97}
+  m_LocalPosition: {x: 0.57, y: 1.56, z: -5.93}
   m_LocalScale: {x: 1, y: 3.1989055, z: 13.640822}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1631,8 +1631,8 @@ Transform:
   m_GameObject: {fileID: 1211186939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.54, y: 1.7125, z: 0.5535}
-  m_LocalScale: {x: 1, y: 3.1989055, z: 13.640822}
+  m_LocalPosition: {x: -5.54, y: 1.6001, z: 0.5535}
+  m_LocalScale: {x: 1, y: 2.9740224, z: 13.640822}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1742,13 +1742,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380060017}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00740959, y: -0.68889004, z: -0.000655845, w: 0.7248277}
-  m_LocalPosition: {x: 0.9421, y: 1.8578, z: 6.8408}
-  m_LocalScale: {x: 1, y: 2.699876, z: 13.099282}
+  m_LocalRotation: {x: 0.009804326, y: -0.7058645, z: 0.0014907453, w: 0.70827746}
+  m_LocalPosition: {x: 1.1433, y: 1.7321, z: 6.8775}
+  m_LocalScale: {x: 1, y: 3.1159267, z: 13.099282}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.564, y: -87.091, z: -0.639}
+  m_LocalEulerAnglesHint: {x: 0.916, y: -89.81, z: -0.672}
 --- !u!1 &1460692681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,9 +2188,9 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 330585545}
 --- !u!1 &1984485646
 GameObject:
   m_ObjectHideFlags: 0

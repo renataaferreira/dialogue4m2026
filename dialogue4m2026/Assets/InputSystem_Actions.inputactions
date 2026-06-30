@@ -1016,9 +1016,9 @@
                 },
                 {
                     "name": "Push",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "5de0fbe5-232e-4363-89c8-39607dd3f039",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -1037,30 +1037,8 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "c8fa71e4-932b-4947-be46-983286986a40",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Push",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ea036a25-28ab-4414-b67e-649e9e87e83b",
-                    "path": "<Touchscreen>/touch3/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Push",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "2D Vector",
-                    "id": "a04a6c2f-0fff-4cd7-964e-86cec4c50c22",
+                    "id": "17fb47d0-45fb-47a7-8ff3-883e25d5ccaf",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -1071,7 +1049,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "1365532a-6ebe-464b-b4fe-28f2bea34543",
+                    "id": "ce585b1c-6949-4f13-8560-0e915619ea97",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -1082,8 +1060,8 @@
                 },
                 {
                     "name": "down",
-                    "id": "64173385-96cb-460b-8e9f-7e7fe0c2650f",
-                    "path": "<AndroidJoystick>/stick/down",
+                    "id": "f733cea5-9d42-4390-906a-8340afb613cf",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1093,8 +1071,8 @@
                 },
                 {
                     "name": "left",
-                    "id": "ded22480-db2f-45ed-b0c0-c193d4572351",
-                    "path": "<NimbusGamepadHid>/buttonSouth",
+                    "id": "89fee74a-5789-4dde-8dc6-914ea326ea3e",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1104,7 +1082,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "e64f7c7e-2f4f-4326-b688-5fca3d4afa0f",
+                    "id": "a8142224-f386-4e35-8cc4-c46fa575feeb",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -1112,6 +1090,17 @@
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "140f395c-6c9f-4cfc-b3db-a2dd7276b556",
+                    "path": "<Keyboard>/leftBracket",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Push",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -1147,17 +1136,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1439177d-d89a-413d-b319-89b1173b3123",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
